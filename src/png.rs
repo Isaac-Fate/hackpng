@@ -22,6 +22,11 @@ impl Png {
         self.chunks.push(chunk)
     }
 
+    /// Inserts a chunk to the specified index of `Png` file's `Chunk` list.
+    pub fn insert_chunk(&mut self, index: usize, chunk: Chunk) {
+        self.chunks.insert(index, chunk);
+    }
+
     /// Searches for a `Chunk` with the specified `chunk_type` and removes the first
     /// matching `Chunk` from this `Png` list of chunks.
     pub fn remove_chunk(&mut self, chunk_type: &str) -> Result<Chunk> {

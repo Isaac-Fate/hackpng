@@ -1,8 +1,6 @@
-use crate::Result;
-
 use super::{
-    encode::{EncodeArgs, encode},
-    decode::{DecodeArgs, decode}
+    encode::EncodeArgs,
+    decode::DecodeArgs
 };
 
 #[derive(clap::Subcommand)]
@@ -16,20 +14,3 @@ pub enum Command {
 
 }
 
-impl Command {
-    
-    pub fn run(self) -> Result<()> {
-        
-        match self {
-            Self::Encode(args) => {
-                encode(args)?;
-            },
-            Self::Decode(args) => {
-                decode(args)?;
-            }
-        }
-
-        Ok(())
-    }
-
-}

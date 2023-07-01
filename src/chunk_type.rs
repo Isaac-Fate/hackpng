@@ -111,11 +111,11 @@ impl Display for ChunkTypeError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
             ChunkTypeError::UnexpectedLength(n_bytes) => {
-                write!(f, "the expected length is 4 while the given string has length {}", n_bytes)
+                write!(f, "The expected length is 4 while the given string has length {}", n_bytes)
             },
 
             ChunkTypeError::InvalidCharacter => {
-                write!(f, "every character must be an ASCII letter")
+                write!(f, "Every character must be an ASCII letter")
             }
         }
     }

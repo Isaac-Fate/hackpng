@@ -160,10 +160,10 @@ impl Display for PngError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
             Self::UnableToRemoveChunk => {
-                write!(f, "{}", "unable to remove the chunk")
+                write!(f, "{}", "Unable to remove the chunk")
             },
             Self::InvalidHeader => {
-                write!(f, "{}", "the extracted PNG header from the input data is invalid")
+                write!(f, "{}", "The extracted PNG header from the input data is invalid")
             }
         }
     }

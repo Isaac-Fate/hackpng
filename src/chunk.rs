@@ -161,13 +161,13 @@ impl Display for ChunkError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
             Self::StringConvertionFailure => {
-                write!(f, "{}", "failed in converting to string")
+                write!(f, "{}", "Failed in converting to string")
             },
             Self::CRCMismatch => {
-                write!(f, "{}", "the CRC value extracted from the input bytes does not match that of the message data")
+                write!(f, "{}", "The CRC value extracted from the input bytes does not match that of the message data")
             },
             Self::InvalidNumberOfBytes => {
-                write!(f, "{}", "the number of input bytes is invalid")
+                write!(f, "{}", "The number of input bytes is invalid")
             }
         }
     }
